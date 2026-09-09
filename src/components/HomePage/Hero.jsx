@@ -43,13 +43,17 @@ const images = [
 
  ];
 
-const LINE1_TEXT = "Above and Beyond";
-const LINE2_TEXT = "the Status-Quo";
+const LINE1_TEXT = "Expert Transcription Services";
+const LINE2_TEXT = "Accurate. Reliable. Confidential.";
+const LINE3_TEXT = "Delivered When You Need It..";
 
 const TYPING_TIME_PER_CHAR = 0.08;
 const TYPING_TIME_LINE1 = LINE1_TEXT.length * TYPING_TIME_PER_CHAR;
 const TYPING_TIME_LINE2 = LINE2_TEXT.length * TYPING_TIME_PER_CHAR;
-const CURSOR_START_TIME = TYPING_TIME_LINE1 + 1 + TYPING_TIME_LINE2;
+const TYPING_TIME_LINE3 = LINE3_TEXT.length * TYPING_TIME_PER_CHAR;
+const LINE2_DELAY = TYPING_TIME_LINE1 + 1;
+const LINE3_DELAY = LINE2_DELAY + TYPING_TIME_LINE2 + 1;
+const CURSOR_START_TIME = LINE3_DELAY + TYPING_TIME_LINE3;
 
 const Typewriter = ({ text, delay }) => {
   const [displayText, setDisplayText] = useState("");
@@ -121,10 +125,20 @@ const Hero = ({ onOpenContact }) => {
               style={{
                 "--line-char-count": LINE2_TEXT.length,
                 "--line-time": `${TYPING_TIME_LINE2}s`,
-                "--line-delay": `${TYPING_TIME_LINE1 + 1}s`,
+                "--line-delay": `${LINE2_DELAY}s`,
               }}
             >
               {LINE2_TEXT}
+            </span>
+            <span
+              className="line-3"
+              style={{
+                "--line-char-count": LINE3_TEXT.length,
+                "--line-time": `${TYPING_TIME_LINE3}s`,
+                "--line-delay": `${LINE3_DELAY}s`,
+              }}
+            >
+              {LINE3_TEXT}
               <span
                 className="cursor-visual"
                 style={{ "--cursor-start": `${CURSOR_START_TIME}s` }}

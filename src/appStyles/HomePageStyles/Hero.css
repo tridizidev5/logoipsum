@@ -122,8 +122,8 @@
 .hero__title {
   width: 100%;
   max-width: 555px;
-  font-size: 50px;
-  line-height: 70px;
+  font-size: 34px;
+  line-height: 46px;
   font-weight: 700;
   color: #0b132a;
   margin-bottom: 24px;
@@ -145,6 +145,11 @@
 }
 
 .hero__title .line-2 {
+  animation: typewriter var(--line-time)
+    steps(var(--line-char-count)) var(--line-delay) forwards !important;
+}
+
+.hero__title .line-3 {
   animation: typewriter var(--line-time)
     steps(var(--line-char-count)) var(--line-delay) forwards !important;
 }
@@ -283,8 +288,8 @@
     gap: 40px;
   }
   .hero__title {
-    font-size: 42px;
-    line-height: 60px;
+    font-size: 29px;
+    line-height: 41px;
   }
   .hero__image-main {
     height: 340px;
@@ -302,8 +307,8 @@
     gap: 32px;
   }
   .hero__title {
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 25px;
+    line-height: 33px;
   }
 
   .cursor-visual {
@@ -325,8 +330,8 @@
     padding: 28px 18px;
   }
   .hero__title {
-    font-size: 28px;
-    line-height: 38px;
+    font-size: 19px;
+    line-height: 26px;
   }
   .hero__subtitle {
     font-size: 14px;

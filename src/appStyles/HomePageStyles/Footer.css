@@ -8,7 +8,7 @@
   color: #f9fafb;
   width: 100%;
   overflow: hidden;
-  padding: clamp(48px, 7vw, 95px) clamp(16px, 6vw, 60px) 26px;
+  padding: clamp(32px, 4vw, 60px) clamp(16px, 6vw, 60px) 26px;
   background-color: #022447;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .footer-iso-image {
-  height: 90px;
+  height: 130px;
   object-fit: contain;
 }
 
@@ -39,20 +39,6 @@
   width: 280px;
   /* border: 1px solid; */
 }
-.footer::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='40 10 1940 100'><path fill='%23FFFFFF' d='M0,30 C600,10 600,190 1440,75 L2000,0 L0,0 Z'/></svg>");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  z-index: 1;
-}
-
 .footer > * {
   position: relative;
   z-index: 5;
@@ -63,7 +49,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  padding-top: 65px;
+  padding-top: 0;
   opacity: 0;
   transform: translateY(24px);
   animation: footerFadeUp 0.85s ease-out forwards;
@@ -359,10 +345,6 @@
    ========================= */
 
 @media (max-width: 1024px) {
-  .footer-inner {
-    padding-top: 56px;
-  }
-
   .footer-top {
     gap: 40px;
   }
@@ -381,17 +363,9 @@
   .footer-column--quikers {
     min-height: auto;
   }
-
-  .footer::before {
-    height: 100px;
-  }
 }
 
 @media (max-width: 768px) {
-  .footer-inner {
-    padding-top: 40px;
-  }
-
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
@@ -426,10 +400,6 @@
     gap: 18px;
     margin-top: 8px;
   }
-
-  .footer::before {
-    height: 85px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -441,19 +411,6 @@
   .footer-address {
     font-size: 13px;
     line-height: 22px;
-  }
-
-  .footer::before {
-    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='40 10 1940 100'><path fill='%23FFFFFF' d='M0,170 C00,1200 600,190 1440,80 L2000,0 L0,0 Z'/></svg>");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    z-index: 1;
-  }
-
-  .footer > * {
-    position: relative;
-    z-index: 5;
   }
 
   .footer-inner {
@@ -525,10 +482,6 @@
   .footer-social-group {
     margin-top: 24px;
     gap: 18px;
-  }
-
-  .footer::before {
-    height: 70px;
   }
 }
 .footer-column--contact .footer-address {
